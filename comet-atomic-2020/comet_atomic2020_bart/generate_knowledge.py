@@ -142,7 +142,7 @@ if __name__ == "__main__":
     batch_size = 8
     relations = ["xIntent", "xNeed", "xWant", "xEffect", "xReact"]
 
-     with open("./data/ED/dataset_preproc.p", "rb") as f:
+    with open("./data/ED/dataset_preproc.p", "rb") as f:
         [data_tra, data_val, data_tst, _] = pickle.load(f)
     
     train_csk = get_csk_feature(model, tokenizer, data_tra, relations)
